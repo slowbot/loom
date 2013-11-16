@@ -1,0 +1,61 @@
+@import "loom/functions/em_calc";
+@import "loom/functions/rem_calc";
+
+@import url("http://fonts.googleapis.com/css?family=Merriweather");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+
+// $BaseType
+// -------------------------------------//
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$custom-font-family: "Open Sans"; // Custom font-face stack, if set will be added to the $font-family
+$font-family: "Merriweather";
+
+// $Brand Colors
+
+$primary-color:     #619cf8 !default;
+$secondary-color:   #73bdc8 !default;
+$wash-color:        #cde8eb !default;
+
+// $System Colors
+
+$alert-color:       #ffe0e0 !default;
+$success-color:     #8ec448 !default;
+$warning-color:     #ff9600 !default;
+$blank-color:       #ffffff !default;
+$type-color:        #444444 !default;
+$disabled-color:    #bbbbbb !default;
+$tint-color:        #f9f9f9 !default;
+
+// Icon Variables
+$icon-square:    remCalc( 50px ) !default;
+
+// Compass Mixin Defaults
+$default-border-radius: 5px;
+$default-box-shadow-color: none;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 0px;
+$default-transition-property: all;
+$default-background-clip: padding-box;
+
+// $Breakpoints
+// Change these valuese to desired screen sizes
+
+// small and Up
+$small-screen:      emCalc( 480px ) !default; 
+
+// medium and Up
+$medium-screen:     emCalc( 960px ) !default;
+
+// large and up
+$large-screen:      emCalc( 1200px ) !default; 
+
+// $Media Queries
+// Used in breakpoint mixin
+$screen:            "only screen" !default;
+$small:             "#{$screen} and (min-width: #{$small-screen})" !default;
+$medium:            "#{$screen} and (min-width: #{$medium-screen})" !default;
+$large:             "#{$screen} and (min-width: #{$large-screen})" !default;
