@@ -1,8 +1,8 @@
 // Variables
 
 $row-medium-max-width: emCalc(1200px);
-$row-padding: emCalc(27px);
-$column-padding: emCalc(27px);
+$row-padding: $base-line-height;
+$column-padding: $base-line-height;
 
 $size1of2-width: 50%; 
 $size1of3-width: 33.33333%; 
@@ -29,7 +29,7 @@ $size4of5-width: 80%;
 
 .row { 
   width: 100%;
-  padding: $row-padding/1.5; 
+  padding: $row-padding; 
   
   &:after {
     content: "";

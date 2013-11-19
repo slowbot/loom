@@ -1,0 +1,33 @@
+.control {
+  		margin-bottom: 2em;
+			text-align: right;
+		}
+		.footer-nav {
+			border-top: 1px solid #808080;
+			margin: 0 -1em;
+		}
+		.footer-nav li a {
+			display: block;
+			padding: 0.8em 1em;
+			border-bottom: 1px solid #808080;
+		}
+		
+		@include breakpoint( medium ) {
+			.footer-nav-link {
+				display: none;
+			}
+			.footer-nav {
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 0;
+				margin: 0;
+			}
+			.footer-nav li {
+				display: inline-block;
+				margin-right: 0.25em;
+			}
+			.footer-nav li a {
+				border: 0;
+			}
+		}

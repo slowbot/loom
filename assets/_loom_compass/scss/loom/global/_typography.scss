@@ -24,12 +24,23 @@ $base-rhythm-unit: $base-line-height / $base-font-size * 1em;
 $base-leader: ($base-line-height - $base-font-size) * 1em / $base-font-size;
 $base-half-leader: $base-leader / 2;
 
+// $Header sizes
+// -------------------------------------//
+
 $alpha: 72;
 $beta: 54;
 $gamma: 45;
 $delta: 36;
 $epsilon: 27;
 $zeta: 18;
+
+// $Rem size mixin w/ pixel fallback
+// -------------------------------------//
+
+@mixin font-size($font-size){
+    font-size:$font-size +px;
+    font-size:$font-size / $base-font-size +rem;
+}
 
 // $Variable $Typescale-Unit
 // -------------------------------------//
@@ -43,12 +54,13 @@ html {
   font-family: $font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+   
    @include breakpoint( medium ) {
    font-size: $medium-font-size;
    line-height: $medium-line-height;
    }
    
-    @include breakpoint( large ) {
+   @include breakpoint( large ) {
    font-size: $large-font-size;
    line-height: $large-line-height;
    }
@@ -69,7 +81,7 @@ h1,
     @include adjust-font-size-to(72px);
 	}
 	
-  @include rhythm(0, 0, 0, .125);
+  //@include rhythm(0, 0, 0, .125);
   @extend %hN;
 }
 
@@ -79,8 +91,8 @@ h2,
   @include breakpoint( medium ) {
 	  @include adjust-font-size-to(54px);
 	}
-  @include adjust-leading-to(.65);
-  @include rhythm(0, 0, 0, .125);
+  //@include adjust-leading-to(.65);
+  //@include rhythm(0, 0, 0, .125);
 	@extend %hN;
 }
 
@@ -88,14 +100,14 @@ h3,
 .gamma {
   @include adjust-font-size-to(45px);
 	@extend %hN;
-	@include adjust-leading-to(.7);
+	//@include adjust-leading-to(.7);
 }
 
 h4,
 .delta {
   @include adjust-font-size-to(36px);
 	@extend %hN;
-	@include adjust-leading-to(.8);
+	//@include adjust-leading-to(.8);
 }
 
 h5,
@@ -103,7 +115,7 @@ h5,
   @include adjust-font-size-to(24px);
 	@include adjust-leading-to(.9);
 	@extend %hN;
-	@include rhythm(.5, 0, 0, .5);
+	//@include rhythm(.5, 0, 0, .5);
 }
 
 h6,
@@ -111,7 +123,7 @@ h6,
   @include adjust-font-size-to(18px);
 	@include adjust-leading-to(1);
 	@extend %hN;
-	@include rhythm(.5, 0, 0, .5);
+	//@include rhythm(.5, 0, 0, .5);
 }
 
 p {
