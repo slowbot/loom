@@ -101,28 +101,28 @@ html {
   line-height: 1.5em;
 }
 
-/* line 42, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 53, ../_loom_compass/scss/loom/global/_typography.scss */
 html {
   font-family: "Merriweather";
   font-size: 16px;
   line-height: 24px;
 }
 @media only screen and (min-width: 60em) {
-  /* line 42, ../_loom_compass/scss/loom/global/_typography.scss */
+  /* line 53, ../_loom_compass/scss/loom/global/_typography.scss */
   html {
     font-size: 18px;
     line-height: 27px;
   }
 }
 @media only screen and (min-width: 75em) {
-  /* line 42, ../_loom_compass/scss/loom/global/_typography.scss */
+  /* line 53, ../_loom_compass/scss/loom/global/_typography.scss */
   html {
     font-size: 20px;
     line-height: 30px;
   }
 }
 
-/* line 58, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 70, ../_loom_compass/scss/loom/global/_typography.scss */
 h1,
 .alpha, h2,
 .beta, h3,
@@ -135,18 +135,14 @@ h1,
   display: block;
 }
 
-/* line 66, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 78, ../_loom_compass/scss/loom/global/_typography.scss */
 h1,
 .alpha {
   font-size: 3.9375em;
   line-height: 1.14286em;
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.1875em;
 }
 @media only screen and (min-width: 60em) {
-  /* line 66, ../_loom_compass/scss/loom/global/_typography.scss */
+  /* line 78, ../_loom_compass/scss/loom/global/_typography.scss */
   h1,
   .alpha {
     font-size: 4.5em;
@@ -154,19 +150,14 @@ h1,
   }
 }
 
-/* line 77, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 89, ../_loom_compass/scss/loom/global/_typography.scss */
 h2,
 .beta {
   font-size: 3.0625em;
   line-height: 1.46939em;
-  line-height: 0.975em;
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.1875em;
 }
 @media only screen and (min-width: 60em) {
-  /* line 77, ../_loom_compass/scss/loom/global/_typography.scss */
+  /* line 89, ../_loom_compass/scss/loom/global/_typography.scss */
   h2,
   .beta {
     font-size: 3.375em;
@@ -174,56 +165,78 @@ h2,
   }
 }
 
-/* line 88, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 100, ../_loom_compass/scss/loom/global/_typography.scss */
 h3,
 .gamma {
   font-size: 2.8125em;
   line-height: 1.6em;
-  line-height: 1.05em;
 }
 
-/* line 95, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 107, ../_loom_compass/scss/loom/global/_typography.scss */
 h4,
 .delta {
   font-size: 2.25em;
   line-height: 1.33333em;
-  line-height: 1.2em;
 }
 
-/* line 102, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 114, ../_loom_compass/scss/loom/global/_typography.scss */
 h5,
 .epsilon {
   font-size: 1.5em;
   line-height: 2em;
-  line-height: 1.35em;
-  margin-top: 0.75em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.75em;
 }
 
-/* line 110, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 122, ../_loom_compass/scss/loom/global/_typography.scss */
 h6,
 .zeta {
   font-size: 1.125em;
   line-height: 1.33333em;
-  line-height: 1.5em;
-  margin-top: 0.75em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.75em;
-}
-
-/* line 117, ../_loom_compass/scss/loom/global/_typography.scss */
-p {
-  margin-bottom: 1.5em;
-}
-/* line 119, ../_loom_compass/scss/loom/global/_typography.scss */
-p.lead {
-  margin-top: 1.5em;
 }
 
 /* Navigation */
+/* line 1, ../_loom_compass/scss/loom/layout/_navigation.scss */
+.control {
+  margin-bottom: 2em;
+  text-align: right;
+}
+
+/* line 5, ../_loom_compass/scss/loom/layout/_navigation.scss */
+.footer-nav {
+  margin: 0 -1em;
+}
+
+/* line 9, ../_loom_compass/scss/loom/layout/_navigation.scss */
+.footer-nav li a {
+  display: block;
+  padding: 0.8em 1em;
+}
+
+@media only screen and (min-width: 60em) {
+  /* line 16, ../_loom_compass/scss/loom/layout/_navigation.scss */
+  .footer-nav-link {
+    display: none;
+  }
+
+  /* line 19, ../_loom_compass/scss/loom/layout/_navigation.scss */
+  .footer-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  /* line 26, ../_loom_compass/scss/loom/layout/_navigation.scss */
+  .footer-nav li {
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+
+  /* line 30, ../_loom_compass/scss/loom/layout/_navigation.scss */
+  .footer-nav li a {
+    border: 0;
+  }
+}
 /* Helpers */
 /* Grid Import */
 /* line 19, ../_loom_compass/scss/loom/layout/_grid.scss */
@@ -241,7 +254,7 @@ p.lead {
 /* line 30, ../_loom_compass/scss/loom/layout/_grid.scss */
 .row {
   width: 100%;
-  padding: 1.125em;
+  padding: 24px;
 }
 /* line 34, ../_loom_compass/scss/loom/layout/_grid.scss */
 .row:after {
@@ -255,7 +268,7 @@ p.lead {
     max-width: 75em;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.6875em;
+    padding: 24px;
   }
 }
 /* line 47, ../_loom_compass/scss/loom/layout/_grid.scss */
@@ -318,8 +331,8 @@ p.lead {
 /* line 74, ../_loom_compass/scss/loom/layout/_grid.scss */
 .column {
   float: left;
-  padding-right: 1.6875em;
-  padding-bottom: 1.6875em;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 @media only screen and (min-width: 60em) {
   /* line 74, ../_loom_compass/scss/loom/layout/_grid.scss */
