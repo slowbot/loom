@@ -184,7 +184,6 @@ h5,
 .epsilon {
   font-size: 1.5em;
   line-height: 2em;
-  line-height: 1.35em;
 }
 
 /* line 122, ../_loom_compass/scss/loom/global/_typography.scss */
@@ -192,16 +191,6 @@ h6,
 .zeta {
   font-size: 1.125em;
   line-height: 1.33333em;
-  line-height: 1.5em;
-}
-
-/* line 129, ../_loom_compass/scss/loom/global/_typography.scss */
-p {
-  margin-bottom: 1.5em;
-}
-/* line 131, ../_loom_compass/scss/loom/global/_typography.scss */
-p.lead {
-  margin-top: 1.5em;
 }
 
 /* Navigation */
@@ -213,7 +202,6 @@ p.lead {
 
 /* line 5, ../_loom_compass/scss/loom/layout/_navigation.scss */
 .footer-nav {
-  border-top: 1px solid #808080;
   margin: 0 -1em;
 }
 
@@ -221,7 +209,6 @@ p.lead {
 .footer-nav li a {
   display: block;
   padding: 0.8em 1em;
-  border-bottom: 1px solid #808080;
 }
 
 @media only screen and (min-width: 60em) {

@@ -34,7 +34,7 @@ $delta: 36;
 $epsilon: 27;
 $zeta: 18;
 
-// $Rem size mixin w/ pixel fallback
+// em size mixin w/ pixel fallback
 // -------------------------------------//
 
 @mixin font-size($font-size){
@@ -113,7 +113,7 @@ h4,
 h5,
 .epsilon {
   @include adjust-font-size-to(24px);
-	@include adjust-leading-to(.9);
+	//@include adjust-leading-to(.9);
 	@extend %hN;
 	//@include rhythm(.5, 0, 0, .5);
 }
@@ -121,12 +121,12 @@ h5,
 h6,
 .zeta {
   @include adjust-font-size-to(18px);
-	@include adjust-leading-to(1);
+	//@include adjust-leading-to(1);
 	@extend %hN;
 	//@include rhythm(.5, 0, 0, .5);
 }
 
 p {
-  @include trailer();
-	&.lead { @include leader(); }
+  //@include trailer();
+	//&.lead { @include leader(); }
 }
