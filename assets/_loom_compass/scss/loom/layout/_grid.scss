@@ -37,6 +37,10 @@ $size4of5-width: 80%;
     clear: both;
   }
   
+  &.full {
+    padding: 0;
+  }
+  
   @include breakpoint( medium ) {
     max-width: $row-medium-max-width;
     margin-left: auto;

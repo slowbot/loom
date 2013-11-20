@@ -16,21 +16,32 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/application.css">
-  <link rel="stylesheet" href="http://basehold.it/30">
+  <!--link rel="stylesheet" href="http://basehold.it/24"-->
   
 </head>
 
 <body id="page" class="js">
   
-  <!--section class="rows">
-
-    <ul>
-        <li class="unit size1of4">Square</li>
-        <li class="unit size1of4">Circle</li>
-        <li class="unit size1of4">Rectangle</li>
-        <li class="unit size1of4">Triangle</li>
+  <header class="control">
+    <!--a href="#footer-nav" class="footer-nav-link">Menu</a-->
+    <a href="#menu" class="menu-link">Menu</a>
+    
+    <nav id="menu" role="navigation">
+      <ul>
+        <li><a href="">Square</a></li>
+        <li><a href="">Circle</a></li>
+        <li><a href="">Rectangle</a></li>
+        <li><a href="">Triangle</a></li>
       </ul>
-  </section-->
+    </nav>
+    
+  </header>
+  
+  <section class="row full">
+    <figure class="squeeze-figure">
+      <img src="http://demo.pattern-lab.info/images/fpo_16x9.png" />
+    </figure>
+  </section>
   
   <section class="row">
     <h1 class="giga">Flatland</h1>
@@ -47,7 +58,7 @@
   
     <h3>Concerning the Inhabitants</h3>
     
-    <p class="zeta">The greatesd length or breadth of a full grown inhabitant of Flatland may be estimated at about eleven of your inches. Twelve inches may be regarded as a maximum.</p>
+    <p class="zeta">The greatest length or breadth of a full grown inhabitant of Flatland may be estimated at about eleven of your inches. Twelve inches may be regarded as a maximum.</p>
   
     <p class="lead">Our Women are Straight Lines.</p> 
     
@@ -65,21 +76,31 @@
     <p>Yet in our more temperate regions, in which the southward attraction is hardly felt, walking sometimes in a perfectly desolate plain where there have been no houses nor trees to guide me, I have been occasionally compelled to remain stationary for hours together, waiting till the rain came before continuing my journey. On the weak and aged, and especially on delicate Females, the force of attraction tells much more heavily than on the robust of the Male Sex, so that it is a point of breeding, if you meet a Lady in the street, always to give her the North side of the way - by no means an easy thing to do always at short notice when you are in rude health and in a climate where it is difficult to tell your North from your South.</p>
     </article>
   
-  </ section>
+  </section>
   
-  <footer class="">
-    <nav class="footer-nav">
-      <ul>
-        <li class="unit size1of4">Square</li>
-        <li class="unit size1of4">Circle</li>
-        <li class="unit size1of4">Rectangle</li>
-        <li class="unit size1of4">Triangle</li>
+  <footer>
+    <nav>
+      <ul id="footer-nav" class="footer-nav" role="navigation">
+        <li class="unit size1of4"><a href="">Square</a></li>
+        <li class="unit size1of4"><a href="">Circle</a></li>
+        <li class="unit size1of4"><a href="">Rectangle</a></li>
+        <li class="unit size1of4"><a href="">Triangle</a></li>
       </ul>
     </nav>
-    
   </footer>
   
   <script src="http://code.jquery.com/jquery.js"></script>
+  <script>
+      $(document).ready(function() {
+        $('body').addClass('js');
+        var $menu = $('#menu'),
+        $menulink = $('.menu-link');
 
+        $menulink.click(function() {
+        $menulink.toggleClass('active');
+        $menu.toggleClass('active');
+        return false;
+        });});
+  </script>
 </body>
 </html>

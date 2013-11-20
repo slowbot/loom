@@ -1,5 +1,9 @@
+@import "compass/typography/vertical_rhythm";
+
 // $BaseType
 // -------------------------------------//
+
+@include establish-baseline;
 
 $font-weight: normal !default;
 
@@ -14,20 +18,11 @@ $large-line-height: 30px !default;
 
 //$font-scale: 100 !default;
 //$font-base: 16 * ($font-scale/100) !default; // converts percentage to a pixel value
-$font-unit: 1rem;
+//$font-unit: 1rem;
 
-$base-rhythm-unit: $base-line-height / $base-font-size * 1rem;
+$base-rhythm-unit: $base-line-height / $base-font-size * 1em;
 $base-leader: ($base-line-height - $base-font-size) * 1em / $base-font-size;
 $base-half-leader: $base-leader / 2;
-
-$medium-rhythm-unit: $base-line-height / $base-font-size * 1rem;
-$medium-leader: ($base-line-height - $base-font-size) * 1rem / $base-font-size;
-$medium-half-leader: $base-leader / 2;
-
-$large-rhythm-unit: $base-line-height / $base-font-size * 1rem;
-$large-leader: ($base-line-height - $base-font-size) * 1rem / $base-font-size;
-$large-half-leader: $base-leader / 2;
-
 
 // $Header sizes
 // -------------------------------------//
@@ -36,8 +31,8 @@ $alpha: 72;
 $beta: 54;
 $gamma: 45;
 $delta: 36;
-$epsilon: 24;
-$zeta: 16;
+$epsilon: 27;
+$zeta: 18;
 
 // em size mixin w/ pixel fallback
 // -------------------------------------//
@@ -55,7 +50,8 @@ $type-scale-unit-value: rem !default;
 // $Styles Global
 // -------------------------------------//
 
-%font-size {
+html {
+  font-family: $font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
    
@@ -70,11 +66,6 @@ $type-scale-unit-value: rem !default;
    }
 }
 
-html {
-  font-family: $font-family;
-  @extend %font-size;
-}
-
 // styles for all headings
 %hN {
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
@@ -82,66 +73,60 @@ html {
 	display: block;
 }
 
-%rythmn-unit {
-  margin-bottom: $base-line-height / $base-font-size * 1rem;
-   
-   @include breakpoint( medium ) {
-   margin-bottom: $medium-line-height / $medium-font-size * 1rem;
-   }
-   
-   @include breakpoint( large ) {
-   margin-bottom: $large-line-height / $large-font-size * 1rem;
-   }
-}
-
 // h1-h6 tags
 h1,
 .alpha {
-  font-size: remCalc( 72px );
+  @include adjust-font-size-to(63px);
+	@include breakpoint( medium ) {
+    @include adjust-font-size-to(72px);
+	}
+	
+  //@include rhythm(0, 0, 0, .125);
   @extend %hN;
-  @extend %rythmn-unit;
 }
 
 h2,
 .beta {
-  font-size: remCalc( 60px );
+  @include adjust-font-size-to(49px);
+  @include breakpoint( medium ) {
+	  @include adjust-font-size-to(54px);
+	}
+  //@include adjust-leading-to(.65);
+  //@include rhythm(0, 0, 0, .125);
 	@extend %hN;
-	@extend %rythmn-unit;
 }
 
 h3,
 .gamma {
-  font-size: remCalc( 48px );
+  @include adjust-font-size-to(45px);
 	@extend %hN;
-	@extend %rythmn-unit;
+	//@include adjust-leading-to(.7);
 }
 
 h4,
 .delta {
-  font-size: remCalc( 36px );
+  @include adjust-font-size-to(36px);
 	@extend %hN;
-	@extend %rythmn-unit;
+	//@include adjust-leading-to(.8);
 }
 
 h5,
 .epsilon {
-  font-size: remCalc( 24px );
+  @include adjust-font-size-to(24px);
+	//@include adjust-leading-to(.9);
 	@extend %hN;
-	line-height: remCalc( 28px ) ;
-	@extend %rythmn-unit;
+	//@include rhythm(.5, 0, 0, .5);
 }
 
 h6,
 .zeta {
-  font-size: remCalc( 16px );
+  @include adjust-font-size-to(18px);
+	//@include adjust-leading-to(1);
 	@extend %hN;
-	line-height: remCalc( 22px ) ;
+	//@include rhythm(.5, 0, 0, .5);
 }
 
 p {
-  @extend %rythmn-unit;
-}
-
-a {
-  text-decoration: none;
+  //@include trailer();
+	//&.lead { @include leader(); }
 }
