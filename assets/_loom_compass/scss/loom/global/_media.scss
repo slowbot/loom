@@ -7,10 +7,10 @@ height: auto;
   overflow: hidden;
   
   @include breakpoint( medium ) {
-    height: 25em;
+    height: 22em;
   }
   
   @include breakpoint( large ) {
-    height: 15em;
+    height: 28em;
   }
 }

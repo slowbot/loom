@@ -29,7 +29,7 @@ a.menu-link {
 			border-bottom: 1px solid #808080;
 		}
 		
-		@media screen and (min-width: 48.25em) {
+		@include breakpoint( medium ) {
 			a.menu-link {
 			   display: none;
 			}

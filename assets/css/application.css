@@ -1,8 +1,16 @@
 @import url("http://fonts.googleapis.com/css?family=Merriweather");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("//hello.myfonts.net/count/291365");
 /* Import global assets for all apps */
 /* Compass CSS3 Library */
 /* Variables */
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'ExcelsiorLT';
+  src: url("assets/fonts/291365_0_0.eot");
+  src: url("assets/fonts//291365_0_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts//291365_0_0.woff") format("woff"), url("assets/fonts//291365_0_0.ttf") format("truetype");
+}
+
 /* Breakpoints */
 /* Font Smoothing */
 /* Text Size Adjust */
@@ -90,32 +98,37 @@ table {
 }
 
 /* Typography */
-/* line 58, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 45, ../_loom_compass/scss/loom/global/_typography.scss */
+.ExcelsiorLT {
+  font-family: ExcelsiorLT;
+}
+
+/* line 63, ../_loom_compass/scss/loom/global/_typography.scss */
 html {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
 }
-@media only screen and (min-width: 60em) {
-  /* line 58, ../_loom_compass/scss/loom/global/_typography.scss */
+@media only screen and (min-width: 54.85714em) {
+  /* line 63, ../_loom_compass/scss/loom/global/_typography.scss */
   html {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 28px;
   }
 }
-@media only screen and (min-width: 75em) {
-  /* line 58, ../_loom_compass/scss/loom/global/_typography.scss */
+@media only screen and (min-width: 85.71429em) {
+  /* line 63, ../_loom_compass/scss/loom/global/_typography.scss */
   html {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
   }
 }
 
-/* line 73, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 78, ../_loom_compass/scss/loom/global/_typography.scss */
 html {
-  font-family: "Merriweather";
+  font-family: "ExcelsiorLT, Merriweather, Georgia, serif";
 }
 
-/* line 79, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 84, ../_loom_compass/scss/loom/global/_typography.scss */
 h1,
 .alpha, h2,
 .beta, h3,
@@ -124,83 +137,101 @@ h1,
 .epsilon, h6,
 .zeta {
   text-rendering: optimizeLegibility;
-  line-height: 1;
   display: block;
+  font-weight: normal;
 }
 
-/* line 85, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 91, ../_loom_compass/scss/loom/global/_typography.scss */
 h1,
 .alpha, h2,
 .beta, h3,
 .gamma, h4,
 .delta, h5,
-.epsilon, p {
-  margin-bottom: 1.5rem;
+.epsilon, h6,
+.zeta, p {
+  margin-bottom: 1.71429rem;
 }
-@media only screen and (min-width: 60em) {
-  /* line 85, ../_loom_compass/scss/loom/global/_typography.scss */
+@media only screen and (min-width: 54.85714em) {
+  /* line 91, ../_loom_compass/scss/loom/global/_typography.scss */
   h1,
   .alpha, h2,
   .beta, h3,
   .gamma, h4,
   .delta, h5,
-  .epsilon, p {
-    margin-bottom: 1.5rem;
+  .epsilon, h6,
+  .zeta, p {
+    margin-bottom: 1.75rem;
   }
 }
-@media only screen and (min-width: 75em) {
-  /* line 85, ../_loom_compass/scss/loom/global/_typography.scss */
+@media only screen and (min-width: 85.71429em) {
+  /* line 91, ../_loom_compass/scss/loom/global/_typography.scss */
   h1,
   .alpha, h2,
   .beta, h3,
   .gamma, h4,
   .delta, h5,
-  .epsilon, p {
-    margin-bottom: 1.5rem;
+  .epsilon, h6,
+  .zeta, p {
+    margin-bottom: 1.66667rem;
   }
 }
 
-/* line 99, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 105, ../_loom_compass/scss/loom/global/_typography.scss */
 h1,
 .alpha {
-  font-size: 4.5rem;
-}
-
-/* line 106, ../_loom_compass/scss/loom/global/_typography.scss */
-h2,
-.beta {
-  font-size: 3.75rem;
+  font-size: 2.57143rem;
+  line-height: 3.5rem;
 }
 
 /* line 113, ../_loom_compass/scss/loom/global/_typography.scss */
-h3,
-.gamma {
-  font-size: 3rem;
+h2,
+.beta {
+  font-size: 1.71429rem;
 }
 
 /* line 120, ../_loom_compass/scss/loom/global/_typography.scss */
-h4,
-.delta {
-  font-size: 2.25rem;
+h3,
+.gamma {
+  font-size: 1.28571rem;
 }
 
 /* line 127, ../_loom_compass/scss/loom/global/_typography.scss */
+h4,
+.delta {
+  font-size: 1.14286rem;
+}
+
+/* line 134, ../_loom_compass/scss/loom/global/_typography.scss */
 h5,
 .epsilon {
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  font-family: "HelveticaNeueLightCondensed", "HelveticaNeue-Light-Condensed", "Helvetica Neue Light Condensed", "proxima-nova-alt-condensed", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 2rem;
 }
 
-/* line 135, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 144, ../_loom_compass/scss/loom/global/_typography.scss */
 h6,
 .zeta {
-  font-size: 1rem;
-  line-height: 1.375rem;
+  font-size: 1.14286rem;
+  line-height: 1.57143rem;
 }
 
-/* line 145, ../_loom_compass/scss/loom/global/_typography.scss */
+/* line 151, ../_loom_compass/scss/loom/global/_typography.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 156, ../_loom_compass/scss/loom/global/_typography.scss */
 a {
   text-decoration: none;
+}
+
+/* line 161, ../_loom_compass/scss/loom/global/_typography.scss */
+nav li,
+.sans {
+  font-family: "HelveticaNeueLightCondensed", "HelveticaNeue-Light-Condensed", "Helvetica Neue Light Condensed", "proxima-nova-alt-condensed", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 /* Media */
@@ -214,17 +245,52 @@ img, video, object {
 .squeeze-figure {
   overflow: hidden;
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 54.85714em) {
   /* line 6, ../_loom_compass/scss/loom/global/_media.scss */
   .squeeze-figure {
-    height: 25em;
+    height: 22em;
   }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 85.71429em) {
   /* line 6, ../_loom_compass/scss/loom/global/_media.scss */
   .squeeze-figure {
-    height: 15em;
+    height: 28em;
   }
+}
+
+/* Theme */
+/* line 1, ../_loom_compass/scss/loom/global/_colors.scss */
+.underline {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9e9e9;
+}
+
+/* Color */
+/* line 6, ../_loom_compass/scss/loom/global/_colors.scss */
+.tinted {
+  background-color: #e9e9e9;
+}
+
+/* Helpers */
+@media only screen and (min-width: 54.85714em) {
+  /* line 2, ../_loom_compass/scss/loom/global/_helpers.scss */
+  .right {
+    float: right;
+  }
+}
+/* line 7, ../_loom_compass/scss/loom/global/_helpers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 11, ../_loom_compass/scss/loom/global/_helpers.scss */
+.rythmn-up {
+  padding-top: 1.71429rem;
+}
+
+/* line 15, ../_loom_compass/scss/loom/global/_helpers.scss */
+footer {
+  display: block;
 }
 
 /* Navigation */
@@ -270,7 +336,7 @@ nav[role=navigation] li a {
   border-bottom: 1px solid #808080;
 }
 
-@media screen and (min-width: 48.25em) {
+@media only screen and (min-width: 54.85714em) {
   /* line 33, ../_loom_compass/scss/loom/layout/_navigation.scss */
   a.menu-link {
     display: none;
@@ -299,6 +365,27 @@ nav[role=navigation] li a {
   }
 }
 /* Helpers */
+@media only screen and (min-width: 54.85714em) {
+  /* line 2, ../_loom_compass/scss/loom/global/_helpers.scss */
+  .right {
+    float: right;
+  }
+}
+/* line 7, ../_loom_compass/scss/loom/global/_helpers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 11, ../_loom_compass/scss/loom/global/_helpers.scss */
+.rythmn-up {
+  padding-top: 1.71429rem;
+}
+
+/* line 15, ../_loom_compass/scss/loom/global/_helpers.scss */
+footer {
+  display: block;
+}
+
 /* Grid Import */
 /* line 19, ../_loom_compass/scss/loom/layout/_grid.scss */
 *,
@@ -324,134 +411,191 @@ nav[role=navigation] li a {
   clear: both;
 }
 /* line 40, ../_loom_compass/scss/loom/layout/_grid.scss */
-.row.full {
+.row.collapse {
   padding: 0;
 }
-@media only screen and (min-width: 60em) {
-  /* line 30, ../_loom_compass/scss/loom/layout/_grid.scss */
-  .row {
-    max-width: 75em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 24px;
+/* line 44, ../_loom_compass/scss/loom/layout/_grid.scss */
+.row.collapse-tall {
+  padding: 0;
+}
+@media only screen and (min-width: 54.85714em) {
+  /* line 44, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .row.collapse-tall {
+    padding: 0 96px;
   }
 }
 /* line 51, ../_loom_compass/scss/loom/layout/_grid.scss */
+.row.full {
+  padding: 0;
+  max-width: 100%;
+}
+@media only screen and (min-width: 54.85714em) {
+  /* line 30, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .row {
+    max-width: 85.71429em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 96px;
+  }
+}
+/* line 63, ../_loom_compass/scss/loom/layout/_grid.scss */
 .row .row {
   margin-left: 0;
   margin-right: 0;
   padding: 0;
 }
 
-/* line 60, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 72, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit {
   float: left;
 }
-/* line 61, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 73, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size1of1 {
   float: none;
 }
-/* line 62, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 74, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size1of2 {
   width: 50%;
 }
-/* line 63, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 75, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size1of3 {
   width: 33.33333%;
 }
-/* line 64, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 76, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size2of3 {
   width: 66.66666%;
 }
-/* line 65, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 77, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size1of4 {
   width: 25%;
 }
-/* line 66, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 78, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size3of4 {
   width: 75%;
 }
-/* line 67, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 79, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size1of5 {
   width: 20%;
 }
-/* line 68, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 80, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size2of5 {
   width: 40%;
 }
-/* line 69, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 81, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size3of5 {
   width: 60%;
 }
-/* line 70, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 82, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit.size4of5 {
   width: 80%;
 }
 
-/* line 73, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 85, ../_loom_compass/scss/loom/layout/_grid.scss */
 .unit-right {
   float: right;
 }
 
-/* line 78, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 90, ../_loom_compass/scss/loom/layout/_grid.scss */
 .column {
   float: left;
   padding-right: 24px;
   padding-bottom: 24px;
 }
-@media only screen and (min-width: 60em) {
-  /* line 78, ../_loom_compass/scss/loom/layout/_grid.scss */
+@media only screen and (min-width: 54.85714em) {
+  /* line 90, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column {
     padding-bottom: 0;
   }
-  /* line 86, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 98, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size1of1 {
     float: none;
   }
-  /* line 87, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 99, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size1of2 {
     width: 50%;
   }
-  /* line 88, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 100, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size1of3 {
     width: 33.33333%;
   }
-  /* line 89, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 101, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size2of3 {
     width: 66.66666%;
   }
-  /* line 90, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 102, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size1of4 {
     width: 25%;
   }
-  /* line 91, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 103, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size3of4 {
     width: 75%;
   }
-  /* line 92, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 104, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size1of5 {
     width: 20%;
   }
-  /* line 93, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 105, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size2of5 {
     width: 40%;
   }
-  /* line 94, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 106, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size3of5 {
     width: 60%;
   }
-  /* line 95, ../_loom_compass/scss/loom/layout/_grid.scss */
+  /* line 107, ../_loom_compass/scss/loom/layout/_grid.scss */
   .column.size4of5 {
     width: 80%;
   }
+  /* line 108, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right {
+    float: right;
+  }
+}
+@media only screen and (min-width: 68.57143em) {
+  /* line 112, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right1of2 {
+    padding-right: 50%;
+  }
+  /* line 113, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right1of3 {
+    padding-right: 33.33333%;
+  }
+  /* line 114, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right2of3 {
+    padding-right: 66.66666%;
+  }
+  /* line 115, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right1of4 {
+    padding-right: 25%;
+  }
+  /* line 116, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right3of4 {
+    padding-right: 75%;
+  }
+  /* line 117, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right1of5 {
+    padding-right: 20%;
+  }
+  /* line 118, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right2of5 {
+    padding-right: 40%;
+  }
+  /* line 119, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right3of5 {
+    padding-right: 60%;
+  }
+  /* line 120, ../_loom_compass/scss/loom/layout/_grid.scss */
+  .column.right4of5 {
+    padding-right: 80%;
+  }
 }
 
-/* line 99, ../_loom_compass/scss/loom/layout/_grid.scss */
-.column:last-of-type {
-  float: right;
+/* line 128, ../_loom_compass/scss/loom/layout/_grid.scss */
+.panel {
+  padding: 24px;
 }
 
-/* line 105, ../_loom_compass/scss/loom/layout/_grid.scss */
+/* line 132, ../_loom_compass/scss/loom/layout/_grid.scss */
 .size1of1 {
   float: none;
 }
