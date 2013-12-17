@@ -19,6 +19,11 @@ $fixed-media: false !default;
                 @content;
             }
         }
+        @else if $size == desktop {
+            @media #{$desktop} {
+                @content;
+            }
+        }
         @else if $size == large {
             @media #{$large} {
                 @content;

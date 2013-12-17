@@ -1,28 +1,33 @@
-@import "compass/typography/vertical_rhythm";
-
 // $BaseType
 // -------------------------------------//
 
-@include establish-baseline;
-
 $font-weight: normal !default;
 
-//$base-font-size: 16px;
+//$base-font-size: 14px;
 //$base-line-height: 24px;
 
-$medium-font-size: 18px !default;
-$medium-line-height: 27px !default;
+$medium-font-size: 16px !default;
+$medium-line-height: 28px !default;
 
-$large-font-size: 20px !default;
+$large-font-size: 18px !default;
 $large-line-height: 30px !default;
 
 //$font-scale: 100 !default;
 //$font-base: 16 * ($font-scale/100) !default; // converts percentage to a pixel value
-//$font-unit: 1rem;
+$font-unit: 1rem;
 
-$base-rhythm-unit: $base-line-height / $base-font-size * 1em;
+$base-rhythm-unit: $base-line-height / $base-font-size * 1rem;
 $base-leader: ($base-line-height - $base-font-size) * 1em / $base-font-size;
 $base-half-leader: $base-leader / 2;
+
+$medium-rhythm-unit: $base-line-height / $base-font-size * 1rem;
+$medium-leader: ($base-line-height - $base-font-size) * 1rem / $base-font-size;
+$medium-half-leader: $base-leader / 2;
+
+$large-rhythm-unit: $base-line-height / $base-font-size * 1rem;
+$large-leader: ($base-line-height - $base-font-size) * 1rem / $base-font-size;
+$large-half-leader: $base-leader / 2;
+
 
 // $Header sizes
 // -------------------------------------//
@@ -31,8 +36,13 @@ $alpha: 72;
 $beta: 54;
 $gamma: 45;
 $delta: 36;
-$epsilon: 27;
-$zeta: 18;
+$epsilon: 24;
+$zeta: 16;
+
+// ExcelsiorLT
+// -------------------------------------//
+
+.ExcelsiorLT { font-family: ExcelsiorLT; }
 
 // em size mixin w/ pixel fallback
 // -------------------------------------//
@@ -50,8 +60,7 @@ $type-scale-unit-value: rem !default;
 // $Styles Global
 // -------------------------------------//
 
-html {
-  font-family: $font-family;
+%font-size {
   font-size: $base-font-size;
   line-height: $base-line-height;
    
@@ -66,67 +75,90 @@ html {
    }
 }
 
+html {
+  font-family: $font-family;
+  @extend %font-size;
+}
+
 // styles for all headings
 %hN {
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
-	line-height: 1;
+
 	display: block;
+	font-weight: normal;
+}
+
+%rythmn-unit {
+  margin-bottom: $base-line-height / $base-font-size * 1rem;
+   
+   @include breakpoint( medium ) {
+   margin-bottom: $medium-line-height / $medium-font-size * 1rem;
+   }
+   
+   @include breakpoint( large ) {
+   margin-bottom: $large-line-height / $large-font-size * 1rem;
+   }
 }
 
 // h1-h6 tags
 h1,
 .alpha {
-  @include adjust-font-size-to(63px);
-	@include breakpoint( medium ) {
-    @include adjust-font-size-to(72px);
-	}
-	
-  //@include rhythm(0, 0, 0, .125);
+  font-size: remCalc( 36px );
   @extend %hN;
+  line-height: remCalc( 49px ) ;
+  @extend %rythmn-unit;
 }
 
 h2,
 .beta {
-  @include adjust-font-size-to(49px);
-  @include breakpoint( medium ) {
-	  @include adjust-font-size-to(54px);
-	}
-  //@include adjust-leading-to(.65);
-  //@include rhythm(0, 0, 0, .125);
+  font-size: remCalc( 24px );
 	@extend %hN;
+	@extend %rythmn-unit;
 }
 
 h3,
 .gamma {
-  @include adjust-font-size-to(45px);
+  font-size: remCalc( 18px );
 	@extend %hN;
-	//@include adjust-leading-to(.7);
+	@extend %rythmn-unit;
 }
 
 h4,
 .delta {
-  @include adjust-font-size-to(36px);
+  font-size: remCalc( 16px );
 	@extend %hN;
-	//@include adjust-leading-to(.8);
+	@extend %rythmn-unit;
 }
 
 h5,
 .epsilon {
-  @include adjust-font-size-to(24px);
-	//@include adjust-leading-to(.9);
+  font-size: remCalc( 14px );
+	font-family: $sans-font-family;
+	text-transform: uppercase;
 	@extend %hN;
-	//@include rhythm(.5, 0, 0, .5);
+	line-height: remCalc( 28px ) ;
+	@extend %rythmn-unit;
 }
 
 h6,
 .zeta {
-  @include adjust-font-size-to(18px);
-	//@include adjust-leading-to(1);
+  font-size: remCalc( 16px );
 	@extend %hN;
-	//@include rhythm(.5, 0, 0, .5);
+	line-height: remCalc( 22px ) ;
+	@extend %rythmn-unit;
 }
 
 p {
-  //@include trailer();
-	//&.lead { @include leader(); }
+  font-weight: 300;
+  @extend %rythmn-unit;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li,
+.sans {
+  font-family: $sans-font-family;
+  text-transform: uppercase;
 }
