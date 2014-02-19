@@ -29,11 +29,9 @@ $size4of5-width: 80%;
 
 .row { 
   width: 100%;
-  padding: $row-padding; 
+  padding: $row-padding;
+  @include clearfix(); 
   
-  &:after {
-		@include pie-clearfix;
-  }
   
   &.collapse {
     padding: 0;
