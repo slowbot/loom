@@ -92,7 +92,7 @@ $size4of5-width: 80%;
 
 .column { 
   float:left;
-  padding: 0 $column-padding / 2 $column-padding $column-padding / 2 ; 
+  padding: 0 $column-padding / 4 $column-padding $column-padding / 4 ; 
 	
 	@include breakpoint( small ) { 
   &.size1of4 { width: $size1of2-width; }

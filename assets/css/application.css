@@ -5,6 +5,21 @@
 /* Font Smoothing */
 /* Text Size Adjust */
 /* Modules */
+/* Post */
+/* line 5, ../_loom_compass/scss/loom/modules/_post.scss */
+.post {
+  background-color: #f8f3e3;
+  margin-top: 0.75em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0em;
+}
+/* line 9, ../_loom_compass/scss/loom/modules/_post.scss */
+.post [class*='post-'] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 /* Pagination */
 /* line 1, ../_loom_compass/scss/loom/modules/_pagination.scss */
 .shuttle {
@@ -18,7 +33,7 @@
   width: 2.625rem;
   line-height: 2.625rem;
   text-align: center;
-  background: rgba(97, 156, 248, 0.5);
+  background: rgba(255, 106, 0, 0.5);
   color: white;
   transition: ease-in-out all .4s;
   -moz-transition: ease-in-out all .4s;
@@ -26,7 +41,7 @@
 }
 /* line 22, ../_loom_compass/scss/loom/modules/_pagination.scss */
 .shuttle .arrow:hover {
-  background: #619cf8;
+  background: #ff6a00;
 }
 /* line 24, ../_loom_compass/scss/loom/modules/_pagination.scss */
 .shuttle .arrow span {
@@ -633,7 +648,7 @@ footer {
 /* line 93, ../_loom_compass/scss/loom/layout/_grid.scss */
 .column {
   float: left;
-  padding: 0 12px 24px 12px;
+  padding: 0 6px 24px 6px;
 }
 @media only screen and (min-width: 30em) {
   /* line 98, ../_loom_compass/scss/loom/layout/_grid.scss */
