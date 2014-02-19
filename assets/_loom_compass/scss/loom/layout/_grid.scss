@@ -32,9 +32,7 @@ $size4of5-width: 80%;
   padding: $row-padding; 
   
   &:after {
-    content: "";
-    display: table;
-    clear: both;
+		@include pie-clearfix;
   }
   
   &.collapse {
@@ -45,6 +43,13 @@ $size4of5-width: 80%;
     padding: 0;
     @include breakpoint( medium ) {
     padding: 0 $row-padding * 4; 
+    }
+  }
+  
+  &.collapse-wide {
+    padding: 0;
+    @include breakpoint( medium ) {
+    padding: $row-padding * 4 0; 
     }
   }  
   

@@ -1,8 +1,6 @@
 // $BaseType
 // -------------------------------------//
 
-$font-weight: normal !default;
-
 //$base-font-size: 14px;
 //$base-line-height: 24px;
 
@@ -39,24 +37,6 @@ $delta: 36;
 $epsilon: 24;
 $zeta: 16;
 
-// ExcelsiorLT
-// -------------------------------------//
-
-.ExcelsiorLT { font-family: ExcelsiorLT; }
-
-// em size mixin w/ pixel fallback
-// -------------------------------------//
-
-@mixin font-size($font-size){
-    font-size:$font-size +px;
-    font-size:$font-size / $base-font-size +rem;
-}
-
-// $Variable $Typescale-Unit
-// -------------------------------------//
-
-$type-scale-unit-value: rem !default;
-
 // $Styles Global
 // -------------------------------------//
 
@@ -76,16 +56,15 @@ $type-scale-unit-value: rem !default;
 }
 
 html {
-  font-family: $font-family;
+  font-family: $sans-font-family;
   @extend %font-size;
 }
 
 // styles for all headings
 %hN {
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
-
 	display: block;
-	font-weight: normal;
+	font-weight: $font-weight;
 }
 
 %rythmn-unit {
@@ -107,6 +86,7 @@ h1,
   @extend %hN;
   line-height: remCalc( 49px ) ;
   @extend %rythmn-unit;
+  font-weight: 500;
 }
 
 h2,
@@ -157,8 +137,11 @@ a {
   text-decoration: none;
 }
 
-nav li,
-.sans {
+nav li {
   font-family: $sans-font-family;
   text-transform: uppercase;
+}
+
+.sans {
+	font-family: $sans-font-family;
 }
