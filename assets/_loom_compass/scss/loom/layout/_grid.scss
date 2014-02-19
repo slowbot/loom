@@ -40,14 +40,14 @@ $size4of5-width: 80%;
   &.collapse-tall {
     padding: 0;
     @include breakpoint( medium ) {
-    padding: 0 $row-padding * 4; 
+    padding: 0 $row-padding * 3; 
     }
   }
   
   &.collapse-wide {
     padding: 0;
     @include breakpoint( medium ) {
-    padding: $row-padding * 4 0; 
+    padding: $row-padding * 3 0; 
     }
   }  
   
@@ -60,7 +60,7 @@ $size4of5-width: 80%;
     max-width: $row-medium-max-width;
     margin-left: auto;
     margin-right: auto;
-    padding: $row-padding $row-padding * 4;    
+    padding: $row-padding $row-padding * 3;    
   }
   
   .row {
@@ -92,10 +92,14 @@ $size4of5-width: 80%;
 
 .column { 
   float:left;
-  padding-right: $column-padding; 
-  padding-bottom: $column-padding;
+  padding: 0 $column-padding / 2 $column-padding $column-padding / 2 ; 
+	
+	@include breakpoint( small ) { 
+  &.size1of4 { width: $size1of2-width; }
+  }
   
-  @include breakpoint( medium ) {
+	
+	@include breakpoint( desktop ) {
   padding-bottom: 0;
   
   &.size1of1 { float: none;}
@@ -110,7 +114,8 @@ $size4of5-width: 80%;
   &.size4of5 { width: $size4of5-width; }
   &.right { float: right;}
   }
-  
+	
+
   @include breakpoint( desktop ) {
   &.right1of2 { padding-right: $size1of2-width; }
   &.right1of3 { padding-right: $size1of3-width; }

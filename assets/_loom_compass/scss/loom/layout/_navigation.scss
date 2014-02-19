@@ -1,7 +1,7 @@
 a.menu-link {
   	    float: right;
 		    display: block;
-		    padding: emCalc(11px);
+		    padding: emCalc(12px);
 		}
 		nav[role=navigation] {
 			clear: both;
@@ -24,8 +24,9 @@ a.menu-link {
 			border-top: 1px solid #808080;
 		}
 		nav[role=navigation] li a {
+			@include adjust-font-size-to(16px);
 			display: block;
-			padding: emCalc(11px);
+			padding: emCalc(12px);
 			border-bottom: 1px solid #808080;
 		}
 		
